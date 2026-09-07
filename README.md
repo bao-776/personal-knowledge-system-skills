@@ -6,7 +6,14 @@
 
 ## 快速开始
 
-1. 将需要的目录从 `skills/` 复制到 Codex skills 目录。
+1. 将需要的目录从 `skills/` 复制到 Codex skills 目录，或先运行安装预览：
+
+   ```powershell
+   python -X utf8 scripts/install_codex_skills.py <codex-skills-directory> --dry-run
+   python -X utf8 scripts/install_codex_skills.py <codex-skills-directory>
+   ```
+
+   第一次命令只显示计划；确认目标后再执行安装。
 2. 重新打开一个 Codex 任务，让技能被发现。
 3. 调用 `$knowledge-vault` 说明你想新建、整理或维护知识库。
 4. 首次建库时，技能先访谈并展示写入预览；获得授权后才创建文件。
@@ -47,4 +54,3 @@ python -X utf8 scripts/privacy_scan.py
 ```
 
 详见 [验证与发布](docs/08-maintainers/validation-and-release.md)。
-
