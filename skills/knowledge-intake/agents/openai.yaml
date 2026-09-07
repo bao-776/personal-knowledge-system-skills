@@ -1,0 +1,7 @@
+interface:
+  display_name: "Knowledge Intake"
+  short_description: "保真摄入资料并区分事实、判断、推测与冲突"
+  default_prompt: "Use $knowledge-intake to help me with this knowledge-base task."
+policy:
+  allow_implicit_invocation: true
+

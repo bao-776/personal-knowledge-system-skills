@@ -1,0 +1,7 @@
+interface:
+  display_name: "Atomic Notes"
+  short_description: "创建或更新有证据、可复用的原子笔记"
+  default_prompt: "Use $atomic-notes to help me with this knowledge-base task."
+policy:
+  allow_implicit_invocation: true
+

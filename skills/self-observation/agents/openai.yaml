@@ -1,0 +1,7 @@
+interface:
+  display_name: "Self Observation"
+  short_description: "记录有证据、可反驳的自我观察与修订提案"
+  default_prompt: "Use $self-observation to help me with this knowledge-base task."
+policy:
+  allow_implicit_invocation: true
+

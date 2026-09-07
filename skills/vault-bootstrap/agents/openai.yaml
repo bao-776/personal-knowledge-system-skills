@@ -1,0 +1,7 @@
+interface:
+  display_name: "Vault Bootstrap"
+  short_description: "访谈后生成最小、可扩展的个人知识库"
+  default_prompt: "Use $vault-bootstrap to help me with this knowledge-base task."
+policy:
+  allow_implicit_invocation: true
+

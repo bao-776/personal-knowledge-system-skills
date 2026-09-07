@@ -1,0 +1,22 @@
+filters:
+  and:
+    - 'type == "learning-resource"'
+properties:
+  file.name:
+    displayName: Resource
+  learning_status:
+    displayName: Status
+  next_action:
+    displayName: Next action
+views:
+  - type: table
+    name: Current
+    filters:
+      or:
+        - 'learning_status == "learning"'
+        - 'learning_status == "queued"'
+    order:
+      - file.name
+      - learning_status
+      - next_action
+

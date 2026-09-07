@@ -1,0 +1,7 @@
+interface:
+  display_name: "Inspire Time"
+  short_description: "把可迁移洞见连接到现实实践与证据"
+  default_prompt: "Use $inspire-time to help me with this knowledge-base task."
+policy:
+  allow_implicit_invocation: true
+

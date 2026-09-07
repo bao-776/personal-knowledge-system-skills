@@ -1,0 +1,7 @@
+interface:
+  display_name: "Growth System"
+  short_description: "管理成长候选、学习资源、实践与掌握证据"
+  default_prompt: "Use $growth-system to help me with this knowledge-base task."
+policy:
+  allow_implicit_invocation: true
+

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Knowledge Vault"
+  short_description: "路由个人知识库的建立、维护、建议与输出"
+  default_prompt: "Use $knowledge-vault to help me with this knowledge-base task."
+policy:
+  allow_implicit_invocation: true
+

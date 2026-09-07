@@ -1,0 +1,7 @@
+interface:
+  display_name: "Obsidian Vault"
+  short_description: "维护 Obsidian 属性、双链、Bases 与仪表盘"
+  default_prompt: "Use $obsidian-vault to help me with this knowledge-base task."
+policy:
+  allow_implicit_invocation: true
+
