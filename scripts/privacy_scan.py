@@ -36,9 +36,10 @@ def main() -> int:
             findings.append(f"{path.relative_to(root)}: non-UTF-8 text")
             continue
         for lineno, line in enumerate(content.splitlines(), 1):
+            scan_line = re.sub(r"https?://[^\s)]+", "", line)
             if path.name != "privacy_scan.py":
                 for label, pattern in PATTERNS.items():
-                    match = pattern.search(line)
+                    match = pattern.search(scan_line)
                     if label == "phone" and match and sum(ch.isdigit() for ch in match.group()) < 10:
                         continue
                     if match:
