@@ -1,6 +1,6 @@
 ---
 name: vault-bootstrap
-description: Design or create a minimal personal knowledge-base structure after interviewing for purpose, content, retrieval, privacy, and existing constraints. Use for a new vault, a major reorganization, or first-time personalization. Do not copy a complete preset before understanding the user.
+description: Design or create a minimal personal knowledge-base structure after interviewing for purpose, retrieval, privacy, and existing constraints. 用于第一次建库、个性化架构或重大整理；理解用户之前不复制完整预设。
 ---
 
 # Vault Bootstrap
@@ -19,4 +19,3 @@ Build the smallest structure that supports the user's real work.
 8. Run one low-sensitivity intake example and verify retrieval and update behavior.
 
 Never infer permission to import, publish, delete, or reorganize existing material.
-

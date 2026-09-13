@@ -1,7 +1,6 @@
 interface:
   display_name: "Knowledge Vault"
   short_description: "路由个人知识库的建立、维护、建议与输出"
-  default_prompt: "Use $knowledge-vault to help me with this knowledge-base task."
+  default_prompt: "使用 $knowledge-vault 判断我现在处于建库、输入、整理、成长、项目、复盘、自我观察还是输出阶段，并选择最短流程。"
 policy:
   allow_implicit_invocation: true
-

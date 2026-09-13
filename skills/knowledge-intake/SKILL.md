@@ -1,6 +1,6 @@
 ---
 name: knowledge-intake
-description: Capture new material into a file-based knowledge base while preserving sources and separating facts, user judgments, AI inferences, actions, conflicts, and unknowns. Use for notes, conversations, documents, or mixed inputs. Do not silently promote uncertain claims into maintained knowledge.
+description: Capture new material while preserving sources and separating facts, user judgments, AI inferences, actions, conflicts, and unknowns. 用于整理文章、对话、会议记录、文档或混合资料；不把未确认内容写成稳定事实。
 ---
 
 # Knowledge Intake
@@ -17,4 +17,3 @@ description: Capture new material into a file-based knowledge base while preserv
 8. Report sources, created or updated paths, unresolved items, and excluded material.
 
 Use [assets/intake-template.md](assets/intake-template.md) when a raw intake record is useful. Do not invent missing abbreviations or context.
-

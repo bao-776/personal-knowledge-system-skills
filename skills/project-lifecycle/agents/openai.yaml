@@ -1,7 +1,6 @@
 interface:
   display_name: "Project Lifecycle"
   short_description: "维护项目状态、决策、证据与中断恢复"
-  default_prompt: "Use $project-lifecycle to help me with this knowledge-base task."
+  default_prompt: "使用 $project-lifecycle 根据目标、状态、决策、证据和下一步记录或恢复这个项目。"
 policy:
   allow_implicit_invocation: true
-

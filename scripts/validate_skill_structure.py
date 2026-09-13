@@ -29,12 +29,20 @@ def main() -> int:
         match = re.search(r"^description:\s*(.+)$", content, re.M)
         if not match or len(match.group(1).strip()) < 40:
             errors.append(f"{name}: description is not discriminating")
+        elif not re.search(r"[\u4e00-\u9fff]", match.group(1)):
+            errors.append(f"{name}: description needs a concise Chinese trigger cue")
         if "TODO" in content:
             errors.append(f"{name}: unfinished TODO")
         if not ui.is_file():
             errors.append(f"{name}: missing agents/openai.yaml")
-        elif "$" + name not in ui.read_text(encoding="utf-8"):
-            errors.append(f"{name}: default prompt must mention the skill")
+        else:
+            ui_content = ui.read_text(encoding="utf-8")
+            if "$" + name not in ui_content:
+                errors.append(f"{name}: default prompt must mention the skill")
+            if not re.search(r"[\u4e00-\u9fff]", ui_content):
+                errors.append(f"{name}: UI metadata needs Chinese guidance")
+            if "to help me with this knowledge-base task" in ui_content:
+                errors.append(f"{name}: default prompt is still generic")
     if errors:
         print("SKILL_STRUCTURE_FAILED")
         print("\n".join(errors))
@@ -44,4 +52,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
-

@@ -1,7 +1,6 @@
 interface:
   display_name: "Inspire Time"
   short_description: "把可迁移洞见连接到现实实践与证据"
-  default_prompt: "Use $inspire-time to help me with this knowledge-base task."
+  default_prompt: "使用 $inspire-time 判断这个洞见是否能迁移到现实场景，并为它设计一个可观察的实践。"
 policy:
   allow_implicit_invocation: true
-

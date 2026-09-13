@@ -1,7 +1,6 @@
 interface:
   display_name: "Self Observation"
   short_description: "记录有证据、可反驳的自我观察与修订提案"
-  default_prompt: "Use $self-observation to help me with this knowledge-base task."
+  default_prompt: "使用 $self-observation 根据具体行为和原话分析重复模式，保留置信度、其他解释和反例，不要给我定性。"
 policy:
   allow_implicit_invocation: true
-

@@ -1,6 +1,6 @@
 ---
 name: growth-system
-description: Manage growth candidates, learning resources, capabilities, practice projects, priorities, capacity, and mastery evidence. Use when turning an interest into a deliberate learning or development path. Do not activate a candidate or change priorities without the user's decision.
+description: Manage growth candidates, learning resources, practice, priorities, capacity, and mastery evidence. 用于评估学习兴趣、设计成长路径或判断是否真正掌握；未经用户决定，不激活候选或改变优先级。
 ---
 
 # Growth System
@@ -16,4 +16,3 @@ description: Manage growth candidates, learning resources, capabilities, practic
 7. Preserve the user's final priority adjustment and reason.
 
 Use templates in [assets](assets). A resource consumed and a task completed are not mastery by themselves.
-

@@ -1,7 +1,6 @@
 interface:
   display_name: "Atomic Notes"
   short_description: "创建或更新有证据、可复用的原子笔记"
-  default_prompt: "Use $atomic-notes to help me with this knowledge-base task."
+  default_prompt: "使用 $atomic-notes 搜索已有内容，判断这份材料应该更新、合并还是新建为一条可追溯的原子笔记。"
 policy:
   allow_implicit_invocation: true
-

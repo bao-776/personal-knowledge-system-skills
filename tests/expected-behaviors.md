@@ -26,3 +26,14 @@
 - Use Obsidian features only when available.
 - Avoid mandatory third-party plugins.
 
+## Installation and recovery
+
+- Installing `knowledge-vault` includes every child Skill it routes to.
+- Lightweight and growth profiles remain usable without the orchestrator.
+- Updates and uninstalls preserve a recoverable backup.
+- Interrupted work resumes from verified state without repeating completed writes.
+
+## Validation claims
+
+- Distinguish deterministic repository checks from real Codex behavior evaluation.
+- Do not claim a trigger or workflow passed until its recorded Agent evaluation exists.

@@ -33,4 +33,6 @@
 | 对外输出 | 先明确受众、目的、披露、来源版本和审核 | knowledge-output | docs/03-knowledge-workflows/knowledge-output.md | output |
 | 建议 | 基于目标和证据提供选项、权衡与小验证 | knowledge-vault | skills/knowledge-vault/references/advice-protocol.md | orchestrator review |
 | 系统变更 | 先改规范和模板，再迁移内容并保留恢复路径 | knowledge-vault | docs/01-architecture/freshness-and-archiving.md | maintainer review |
-
+| 中断恢复 | 保存已完成、当前状态、未决项和验证证据，从首个未验证步骤继续 | knowledge-vault | skills/knowledge-vault/references/recovery-protocol.md | orchestrator review |
+| 渐进启用 | 从轻量、成长或完整模式开始，按真实需要增加模块 | knowledge-vault | docs/00-overview/usage-modes.md | install smoke |
+| 效果检查 | 用找回、更新、接续和复盘后的变化判断系统价值 | knowledge-vault | docs/00-overview/success-metrics.md | user review |

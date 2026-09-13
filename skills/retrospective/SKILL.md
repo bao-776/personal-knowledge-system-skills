@@ -1,6 +1,6 @@
 ---
 name: retrospective
-description: Facilitate evidence-based project or periodic retrospectives one question at a time, separating events, outcomes, interpretations, contributions, counterfactuals, and next experiments. Use after completion, termination, or a review period. Do not fabricate the user's reflection.
+description: Facilitate evidence-based project or periodic retrospectives one question at a time. 用于项目结束、停止，或周/月/季度复盘，区分事件、结果、解释、贡献和下一步实验；不替用户虚构反思。
 ---
 
 # Retrospective
@@ -16,4 +16,3 @@ description: Facilitate evidence-based project or periodic retrospectives one qu
 7. End with a small decision, process change, or experiment that can be observed later.
 
 Use the matching template in [assets](assets). Do not backdate later outcomes into an earlier period.
-

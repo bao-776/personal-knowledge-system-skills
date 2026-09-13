@@ -1,7 +1,6 @@
 interface:
   display_name: "Knowledge Output"
   short_description: "按受众、目的和披露边界生成可追溯输出"
-  default_prompt: "Use $knowledge-output to help me with this knowledge-base task."
+  default_prompt: "使用 $knowledge-output 先确认受众、目的、披露边界和来源版本，再整理这份对外输出。"
 policy:
   allow_implicit_invocation: true
-

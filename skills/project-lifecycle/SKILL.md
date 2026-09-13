@@ -1,6 +1,6 @@
 ---
 name: project-lifecycle
-description: Create and maintain file-based project goals, status, decisions, evidence, interruption checkpoints, completion summaries, and handoff context. Use for substantive projects that need continuity and verification. Do not replace the delivery system or inflate team and AI output into personal capability.
+description: Maintain project goals, status, decisions, evidence, interruption checkpoints, summaries, and handoff context. 用于记录或恢复需要连续推进和验证的项目；不替代交付系统，也不把团队或 AI 产出夸大为个人能力。
 ---
 
 # Project Lifecycle
@@ -16,4 +16,3 @@ description: Create and maintain file-based project goals, status, decisions, ev
 7. Report actual validation and remaining uncertainty.
 
 Use the templates in [assets](assets). Preserve attribution among the user, collaborators, automation, and AI.
-

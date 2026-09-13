@@ -1,6 +1,6 @@
 ---
 name: knowledge-output
-description: Create audience-specific deliverables from maintained knowledge after confirming purpose, disclosure, ownership, review, and source versions. Use for reports, applications, articles, briefs, or exports. Do not treat a polished output as the maintained source of truth.
+description: Create audience-specific deliverables after confirming purpose, disclosure, ownership, review, and source versions. 用于从知识库生成报告、申请、文章、简报或公开输出；不把成品反向视为事实来源。
 ---
 
 # Knowledge Output
@@ -16,4 +16,3 @@ description: Create audience-specific deliverables from maintained knowledge aft
 7. If a source fact is wrong, correct the Raw/Wiki layer first and regenerate the output.
 
 Do not expose internal reasoning, private examples, or unrelated preferences.
-

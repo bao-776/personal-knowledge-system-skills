@@ -5,6 +5,7 @@
 ![Codex Skills](https://img.shields.io/badge/Codex-Skills-111827?style=flat-square)
 ![Obsidian Compatible](https://img.shields.io/badge/Obsidian-Compatible-7C3AED?style=flat-square)
 ![Skills](https://img.shields.io/badge/Skills-11-0EA5E9?style=flat-square)
+![Version](https://img.shields.io/badge/Version-0.1.1-FF6B35?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-22C55E?style=flat-square)
 
 我做这套 Skill，是因为我发现“收藏”很容易，真正把资料变成自己的理解却很难。工作中的项目、科研里的问题、学过的课程、突然闪过的念头，还有那些当时很重要、后来却想不起来的感受和判断，常常一起压在脑子里，或者停在一个越来越满的收藏夹中。
@@ -76,6 +77,16 @@
 
 这套系统不要求你把生活变成一张巨大的表格。你可以只安装此刻需要的 Skill，也可以让它逐渐长成更完整的个人系统。
 
+### 三种开始方式
+
+| 模式 | 适合你现在的需要 | 包含范围 |
+|---|---|---|
+| `lightweight` | 先把资料接住、整理成笔记和输出 | Intake、Atomic Notes、Output |
+| `growth` | 同时记录学习、项目和复盘 | lightweight，加 Growth、Project、Retrospective |
+| `full` | 建立完整的个人知识与成长系统 | 全部 11 个 Skill |
+
+模式只是安装组合，可以随时调整。具体说明见 [使用模式](docs/00-overview/usage-modes.md)。
+
 ## 📚 方法依据
 
 这些理论和著作提供了设计参考。它们支持某一部分方法选择，不代表整套 Skill 已经经过整体效果实验。
@@ -107,16 +118,32 @@
 ## 🚀 快速开始
 
 1. 克隆仓库，或下载源码。
-2. 将需要的目录从 `skills/` 复制到 Codex skills 目录；也可以先运行安装预览：
+2. 查看可安装 Skill 和三种模式：
 
    ```powershell
-   python -X utf8 scripts/install_codex_skills.py <codex-skills-directory> --dry-run
-   python -X utf8 scripts/install_codex_skills.py <codex-skills-directory>
+   python -X utf8 scripts/install_codex_skills.py --list
    ```
 
-3. 重新打开一个 Codex 任务，让技能被发现。
-4. 调用 `$knowledge-vault`，说出你此刻想建立、整理、记录或梳理清楚的事情。
-5. 首次建库时，Skill 会先访谈并展示写入预览，获得授权后才创建文件。
+3. 先预览，再安装。以下示例使用完整模式：
+
+   ```powershell
+   python -X utf8 scripts/install_codex_skills.py <codex-skills-directory> --profile full --dry-run
+   python -X utf8 scripts/install_codex_skills.py <codex-skills-directory> --profile full
+   python -X utf8 scripts/install_codex_skills.py <codex-skills-directory> --profile full --verify
+   ```
+
+   只安装 `$knowledge-vault` 时，脚本会自动补齐它路由的全部子 Skill，避免总控入口缺少实际工作流。
+
+4. 重新打开一个 Codex 任务，让技能被发现。
+5. 调用 `$knowledge-vault`，说出你此刻想建立、整理、记录或梳理清楚的事情。
+6. 首次建库时，Skill 会先访谈并展示写入预览，获得授权后才创建文件。
+
+更新时使用 `--force`。脚本会先把已有版本移动到备份目录。安全卸载同样先预览，并将文件移入可恢复备份：
+
+```powershell
+python -X utf8 scripts/install_codex_skills.py <codex-skills-directory> --profile full --force --dry-run
+python -X utf8 scripts/install_codex_skills.py <codex-skills-directory> atomic-notes --uninstall --dry-run
+```
 
 完整流程见 [系统总览](docs/00-overview/system-overview.md) 和 [用户旅程](docs/00-overview/user-journey.md)。
 
@@ -134,9 +161,9 @@
 ## ✅ 验证
 
 ```powershell
-python -X utf8 scripts/validate_skill_structure.py
-python -X utf8 scripts/validate_internal_links.py
-python -X utf8 scripts/privacy_scan.py
+python -X utf8 scripts/run_checks.py
 ```
 
-详见 [验证与发布](docs/08-maintainers/validation-and-release.md)。项目采用 [MIT License](LICENSE)。
+这条命令检查结构、链接、中文评测清单、Git 历史隐私、安装结果和最小 Vault。它属于自动契约检查，不等同于真实 Codex 行为已经通过。触发与输出仍需按 [行为评测](tests/evals/README.md) 在新任务中验证。
+
+详见 [0.1.1 发布自检](docs/08-maintainers/release-readiness-0.1.1.md)、[验证与发布](docs/08-maintainers/validation-and-release.md)、[测试覆盖矩阵](docs/08-maintainers/test-coverage-matrix.md) 和 [Changelog](CHANGELOG.md)。项目采用 [MIT License](LICENSE)。

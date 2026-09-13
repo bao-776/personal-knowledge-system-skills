@@ -1,6 +1,6 @@
 ---
 name: self-observation
-description: Capture evidence-based self-observations and maintain personal-manual revision proposals using behavior, user language, confidence, alternatives, and counterevidence. Use for self-understanding across repeated contexts. Do not diagnose, fix a permanent personality label, or infer a stable trait from one event.
+description: Capture evidence-based self-observations using behavior, user language, confidence, alternatives, and counterevidence. 用于理解跨情境反复出现的个人模式并提出个人说明书修订；不诊断或凭一次事件固定人格标签。
 ---
 
 # Self Observation
@@ -16,4 +16,3 @@ description: Capture evidence-based self-observations and maintain personal-manu
 7. Use [references/personal-manual-updates.md](references/personal-manual-updates.md) to prepare a low-frequency revision proposal.
 
 Use templates in [assets](assets). Offer dialogue and testable questions, not diagnosis or moral judgment.
-

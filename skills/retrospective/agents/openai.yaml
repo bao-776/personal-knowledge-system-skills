@@ -1,7 +1,6 @@
 interface:
   display_name: "Retrospective"
   short_description: "用事件证据完成项目或周期复盘"
-  default_prompt: "Use $retrospective to help me with this knowledge-base task."
+  default_prompt: "使用 $retrospective 根据事件与结果逐题陪我完成项目或周期复盘，不要替我回答。"
 policy:
   allow_implicit_invocation: true
-

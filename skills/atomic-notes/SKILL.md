@@ -1,6 +1,6 @@
 ---
 name: atomic-notes
-description: Create, split, merge, or update atomic Markdown notes around one reusable question or conclusion, with source traceability and strong links. Use when durable knowledge should be maintained. Do not fragment notes merely to increase note count or backlinks.
+description: Create, split, merge, or update source-traceable atomic Markdown notes around one reusable question or conclusion. 用于原子笔记、知识卡片、合并重复笔记或更新已有理解；不要为了增加数量或双链而拆碎内容。
 ---
 
 # Atomic Notes
@@ -19,4 +19,3 @@ Read [references/atomicity-criteria.md](references/atomicity-criteria.md). A not
 6. Verify the note remains understandable alone and can be found from its topic or application.
 
 Do not overwrite a different conclusion merely because keywords match.
-

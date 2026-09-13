@@ -7,7 +7,7 @@
 3. 不提交真实用户资料；测试数据必须虚构。
 4. 新规则应说明默认值、可配置项和停止条件。
 5. 运行结构、链接和隐私检查。
-6. 在变更说明中列出测试场景及结果。
+6. 为触发或行为变化更新 `tests/evals/cases.json`，区分自动契约检查与真实 Agent 评测。
+7. 在变更说明中列出测试场景及结果。
 
 新增 Skill 前阅读 [技能边界](docs/08-maintainers/skill-boundaries.md) 和 [新增技能](docs/08-maintainers/adding-a-new-skill.md)。
-

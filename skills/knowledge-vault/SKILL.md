@@ -1,6 +1,6 @@
 ---
 name: knowledge-vault
-description: Route end-to-end personal knowledge-base work across setup, intake, organization, growth, projects, self-observation, review, and output. Use when the request spans multiple knowledge workflows or the user is unsure which workflow applies. Do not use for a single well-scoped subtask covered by a dedicated skill.
+description: Route end-to-end personal knowledge-base work across setup, intake, organization, growth, projects, self-observation, review, and output. 用于跨阶段知识库任务，或用户不知道该调用哪个 Skill；单一明确任务优先交给对应子 Skill。
 ---
 
 # Knowledge Vault
@@ -15,6 +15,8 @@ Coordinate the suite without loading every subsystem.
 4. Route using [references/workflow-router.md](references/workflow-router.md). Load only the selected workflow.
 5. Report what changed, the evidence used, unresolved decisions, and the next useful action.
 
+If an interrupted or partial workflow must continue, read [references/recovery-protocol.md](references/recovery-protocol.md). If the routed child Skill is unavailable, name the missing Skill and provide a bounded preview; do not pretend the full workflow ran.
+
 For first-time or cross-domain interviews, read [references/interview-routing.md](references/interview-routing.md). For advice, read [references/advice-protocol.md](references/advice-protocol.md).
 
 ## Shared invariants
@@ -25,4 +27,3 @@ For first-time or cross-domain interviews, read [references/interview-routing.md
 - Do not treat AI organization as a source, an output as a fact source, or one success as stable mastery.
 - Keep optional systems optional. Do not impose a life taxonomy or an Obsidian plugin.
 - Preserve user ownership of goals, tradeoffs, disclosure, and final decisions.
-

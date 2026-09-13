@@ -10,3 +10,4 @@ Raw 原始证据 → Wiki 可维护理解 → Outputs 场景成品
 
 `knowledge-vault` 负责识别当前阶段。其他 Skill 各自处理一种明确工作，避免在一次调用中加载全部规则。方法层保持 Markdown 通用；`obsidian-vault` 提供 Obsidian 增强。
 
+用户可以从 [轻量、成长或完整模式](usage-modes.md) 开始。系统效果通过 [真实使用指标](success-metrics.md) 检查，不以笔记数量或 AI 产出量代替。
