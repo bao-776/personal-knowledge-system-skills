@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.2 - 2026-09-14
+
+- 增加中文主站与独立英文页，并通过 GitHub Pages 自动部署。
+- 优化 README 首屏、增加英文 README，并补充官网和反馈入口。
+- 增加独立标题、摘要、canonical、hreflang、Open Graph、X Card 和 JSON-LD。
+- 增加 `robots.txt`、`sitemap.xml`、404 页面和 1200×630 分享图。
+- 增加静态站 SEO 契约检查及搜索发现维护说明。
+
+搜索技术检查只能证明页面具备基础抓取和理解条件，不代表已经被搜索引擎收录、获得排名或被生成式回答引用。
+
 ## 0.1.1 - 2026-09-13
 
 - 增加 lightweight、growth 和 full 三种安装模式。

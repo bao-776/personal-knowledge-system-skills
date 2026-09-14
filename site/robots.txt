@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bao-776.github.io/personal-knowledge-system-skills/sitemap.xml

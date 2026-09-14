@@ -21,6 +21,7 @@ def main() -> int:
     OUT.mkdir(parents=True)
     run("scripts/validate_skill_structure.py")
     run("scripts/validate_internal_links.py")
+    run("scripts/validate_site.py")
     run("scripts/validate_eval_cases.py")
     run("scripts/test_privacy_scan.py")
     run("scripts/privacy_scan.py", "--git-history", "--report", str(OUT / "privacy-report.json"))
@@ -28,7 +29,7 @@ def main() -> int:
     run("scripts/install_codex_skills.py", str(OUT / "skills"), "--profile", "full")
     run("scripts/install_codex_skills.py", str(OUT / "skills"), "--profile", "full", "--verify")
     run("scripts/test_installer.py")
-    print("ALL_CHECKS_OK contract_checks=8 agent_evaluation=not_run")
+    print("ALL_CHECKS_OK contract_checks=9 agent_evaluation=not_run")
     return 0
 
 if __name__ == "__main__":

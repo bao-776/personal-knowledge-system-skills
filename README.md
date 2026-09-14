@@ -1,11 +1,13 @@
 # Personal Knowledge System Skills
 
-> 🧠 一套可以在 Codex 中调用、兼容 Obsidian 与普通 Markdown 文件夹的个人知识库 Skill Suite。
+> 🧠 面向学生、研究者和知识工作者的开源 Codex 个性化知识库 Skill Suite：用 Markdown 或 Obsidian 接住零散信息，连接原子笔记，记录成长与项目，并在证据基础上复盘和自我观察。
+
+[项目官网](https://bao-776.github.io/personal-knowledge-system-skills/) · [English](README.en.md) · [快速安装](#-快速开始) · [11 个 Skills](#-什么时候调用哪个-skill) · [提交反馈](https://github.com/bao-776/personal-knowledge-system-skills/issues)
 
 ![Codex Skills](https://img.shields.io/badge/Codex-Skills-111827?style=flat-square)
 ![Obsidian Compatible](https://img.shields.io/badge/Obsidian-Compatible-7C3AED?style=flat-square)
 ![Skills](https://img.shields.io/badge/Skills-11-0EA5E9?style=flat-square)
-![Version](https://img.shields.io/badge/Version-0.1.1-FF6B35?style=flat-square)
+![Version](https://img.shields.io/badge/Version-0.1.2-FF6B35?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-22C55E?style=flat-square)
 
 我做这套 Skill，是因为我发现“收藏”很容易，真正把资料变成自己的理解却很难。工作中的项目、科研里的问题、学过的课程、突然闪过的念头，还有那些当时很重要、后来却想不起来的感受和判断，常常一起压在脑子里，或者停在一个越来越满的收藏夹中。
@@ -166,4 +168,4 @@ python -X utf8 scripts/run_checks.py
 
 这条命令检查结构、链接、中文评测清单、Git 历史隐私、安装结果和最小 Vault。它属于自动契约检查，不等同于真实 Codex 行为已经通过。触发与输出仍需按 [行为评测](tests/evals/README.md) 在新任务中验证。
 
-详见 [0.1.1 发布自检](docs/08-maintainers/release-readiness-0.1.1.md)、[验证与发布](docs/08-maintainers/validation-and-release.md)、[测试覆盖矩阵](docs/08-maintainers/test-coverage-matrix.md) 和 [Changelog](CHANGELOG.md)。项目采用 [MIT License](LICENSE)。
+详见 [0.1.1 发布自检](docs/08-maintainers/release-readiness-0.1.1.md)、[验证与发布](docs/08-maintainers/validation-and-release.md)、[搜索发现与 GEO 维护](docs/08-maintainers/search-discovery.md)、[测试覆盖矩阵](docs/08-maintainers/test-coverage-matrix.md) 和 [Changelog](CHANGELOG.md)。项目采用 [MIT License](LICENSE)。

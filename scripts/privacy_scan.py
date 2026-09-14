@@ -3,14 +3,18 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import subprocess
 import sys
 from pathlib import Path
 
-TEXT_EXTENSIONS = {".md", ".txt", ".yaml", ".yml", ".json", ".toml", ".py", ".base", ".gitignore"}
-TEXT_NAMES = {"LICENSE", "VERSION", ".gitignore", ".gitkeep"}
+TEXT_EXTENSIONS = {".md", ".txt", ".yaml", ".yml", ".json", ".toml", ".py", ".base", ".gitignore", ".html", ".css", ".xml"}
+TEXT_NAMES = {"LICENSE", "VERSION", ".gitignore", ".gitkeep", ".nojekyll"}
+REVIEWED_BINARIES = {
+    "site/assets/social-preview.png": "ba131beb6433cb431dff634fd72b4ffa0df9617c8ac1d3cc611a00830554fcce",
+}
 EXCLUDED_PARTS = {".git", "__pycache__", ".test-output"}
 PATTERNS = {
     "windows-user-path": re.compile(r"[A-Za-z]:\\Users\\[^\\/\s]+", re.I),
@@ -41,6 +45,10 @@ def scan_text(content: str, location: str, forbidden: list[str]) -> list[str]:
                 findings.append(f"{location}:{lineno}: forbidden token")
     return findings
 
+def reviewed_binary(name: str, content: bytes) -> bool:
+    expected = REVIEWED_BINARIES.get(Path(name).as_posix())
+    return bool(expected and hashlib.sha256(content).hexdigest() == expected)
+
 def git_output(root: Path, *args: str) -> str:
     result = subprocess.run(["git", *args], cwd=root, text=True, encoding="utf-8", errors="replace", capture_output=True)
     if result.returncode:
@@ -57,6 +65,9 @@ def scan_history(root: Path, forbidden: list[str]) -> tuple[list[str], int]:
         for name in names:
             path = Path(name)
             if path.suffix.lower() not in TEXT_EXTENSIONS and path.name not in TEXT_NAMES:
+                result = subprocess.run(["git", "show", f"{commit}:{name}"], cwd=root, capture_output=True)
+                if result.returncode == 0 and reviewed_binary(name, result.stdout):
+                    continue
                 findings.add(f"git-history:{commit[:12]}:{name}: binary or unreviewed file")
                 continue
             result = subprocess.run(["git", "show", f"{commit}:{name}"], cwd=root, capture_output=True)
@@ -83,6 +94,8 @@ def main() -> int:
     for path in iter_files(root):
         relative = path.relative_to(root).as_posix()
         if path.suffix.lower() not in TEXT_EXTENSIONS and path.name not in TEXT_NAMES:
+            if reviewed_binary(relative, path.read_bytes()):
+                continue
             findings.append(f"{relative}: binary or unreviewed file")
             continue
         try:
