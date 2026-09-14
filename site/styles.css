@@ -21,6 +21,7 @@ body {
   font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
   font-size: 17px;
   line-height: 1.72;
+  overflow-x: hidden;
 }
 a { color: var(--accent-dark); text-underline-offset: 3px; }
 a:hover { text-decoration-thickness: 2px; }
@@ -33,11 +34,12 @@ nav { min-height: 68px; display: flex; align-items: center; justify-content: spa
 .brand { color: var(--ink); font-weight: 750; text-decoration: none; letter-spacing: -.02em; }
 .navlinks { display: flex; align-items: center; gap: 1rem; font-size: .94rem; }
 .hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(270px, .75fr); gap: clamp(2rem, 7vw, 6rem); padding: clamp(4rem, 9vw, 8rem) 0 5rem; }
+.hero > *, .section-head > *, .feature > *, .skill > * { min-width: 0; }
 .eyebrow { color: var(--accent-dark); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; }
 h1 { font-size: clamp(2.65rem, 7vw, 5.7rem); line-height: 1.02; letter-spacing: -.065em; margin: .55rem 0 1.5rem; max-width: 12ch; }
 h2 { font-size: clamp(1.8rem, 4vw, 3.25rem); line-height: 1.13; letter-spacing: -.04em; margin: 0 0 1rem; }
 h3 { font-size: 1.16rem; line-height: 1.35; margin: 0 0 .5rem; }
-p { max-width: 68ch; }
+p { max-width: 68ch; overflow-wrap: anywhere; }
 .lead { font-size: clamp(1.1rem, 2vw, 1.35rem); color: #394540; }
 .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
 .button { display: inline-flex; align-items: center; min-height: 46px; padding: .6rem 1rem; border: 1px solid var(--ink); border-radius: 999px; color: var(--ink); text-decoration: none; font-weight: 700; }
