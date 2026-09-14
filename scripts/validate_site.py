@@ -79,6 +79,9 @@ def main() -> int:
     preview = SITE / "assets" / "social-preview.png"
     if not preview.exists() or preview.read_bytes()[16:24] != (1200).to_bytes(4, "big") + (630).to_bytes(4, "big"):
         errors.append("social-preview.png must be a 1200x630 PNG")
+    favicon = SITE / "assets" / "favicon.png"
+    if not favicon.exists() or favicon.read_bytes()[16:24] != (64).to_bytes(4, "big") + (64).to_bytes(4, "big"):
+        errors.append("favicon.png must be a 64x64 PNG")
     try: ElementTree.parse(SITE / "sitemap.xml")
     except (ElementTree.ParseError, OSError) as exc: errors.append(f"invalid sitemap.xml: {exc}")
     robots = (SITE / "robots.txt").read_text(encoding="utf-8")
@@ -87,7 +90,7 @@ def main() -> int:
         print("SITE_CHECK_FAILED")
         print("\n".join(errors))
         return 1
-    print("SITE_CHECK_OK pages=2 social_preview=1200x630 sitemap=valid")
+    print("SITE_CHECK_OK pages=2 social_preview=1200x630 favicon=64x64 sitemap=valid")
     return 0
 
 

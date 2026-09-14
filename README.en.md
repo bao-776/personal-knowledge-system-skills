@@ -7,7 +7,7 @@
 ![Codex Skills](https://img.shields.io/badge/Codex-Skills-111827?style=flat-square)
 ![Obsidian Compatible](https://img.shields.io/badge/Obsidian-Compatible-7C3AED?style=flat-square)
 ![Skills](https://img.shields.io/badge/Skills-11-0EA5E9?style=flat-square)
-![Version](https://img.shields.io/badge/Version-0.1.2-FF6B35?style=flat-square)
+![Version](https://img.shields.io/badge/Version-0.1.3-FF6B35?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-22C55E?style=flat-square)
 
 Saving information is easy. Turning it into understanding that remains useful across projects, study, and daily life is harder. This project helps you preserve raw material, separate evidence from interpretation, connect reusable notes, test ideas in practice, review what happened, and produce work for a clear audience.

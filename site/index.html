@@ -9,7 +9,9 @@
   <link rel="alternate" hreflang="zh-CN" href="https://bao-776.github.io/personal-knowledge-system-skills/">
   <link rel="alternate" hreflang="en" href="https://bao-776.github.io/personal-knowledge-system-skills/en/">
   <link rel="alternate" hreflang="x-default" href="https://bao-776.github.io/personal-knowledge-system-skills/">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN"><meta property="og:locale:alternate" content="en_US">
   <meta property="og:title" content="Personal Knowledge System Skills｜Codex 个性化知识库">
   <meta property="og:description" content="接住零散信息，连接原子笔记，记录成长与项目，并在证据基础上复盘和自我观察。">
   <meta property="og:url" content="https://bao-776.github.io/personal-knowledge-system-skills/">
@@ -21,7 +23,7 @@
   <meta name="twitter:image" content="https://bao-776.github.io/personal-knowledge-system-skills/assets/social-preview.png">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Personal Knowledge System Skills","url":"https://bao-776.github.io/personal-knowledge-system-skills/","inLanguage":["zh-CN","en"]},{"@type":"SoftwareSourceCode","name":"Personal Knowledge System Skills","description":"一套用于构建个性化、证据型个人知识系统的 11 个开源 Codex Skills，兼容 Markdown 与 Obsidian。","codeRepository":"https://github.com/bao-776/personal-knowledge-system-skills","url":"https://bao-776.github.io/personal-knowledge-system-skills/","license":"https://opensource.org/license/mit","programmingLanguage":["Markdown","Python","HTML","CSS"],"runtimePlatform":"Codex","softwareVersion":"0.1.2","author":{"@type":"Person","name":"bao-776","url":"https://github.com/bao-776"}}]}
+  {"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Personal Knowledge System Skills","url":"https://bao-776.github.io/personal-knowledge-system-skills/","inLanguage":["zh-CN","en"]},{"@type":"SoftwareSourceCode","name":"Personal Knowledge System Skills","description":"一套用于构建个性化、证据型个人知识系统的 11 个开源 Codex Skills，兼容 Markdown 与 Obsidian。","codeRepository":"https://github.com/bao-776/personal-knowledge-system-skills","url":"https://bao-776.github.io/personal-knowledge-system-skills/","license":"https://opensource.org/license/mit","programmingLanguage":["Markdown","Python","HTML","CSS"],"runtimePlatform":"Codex","softwareVersion":"0.1.3","dateModified":"2026-09-14","isAccessibleForFree":true,"keywords":["Codex Skills","个人知识库","Obsidian","原子笔记","知识管理","项目复盘"],"author":{"@type":"Person","name":"bao-776","url":"https://github.com/bao-776"}}]}
   </script>
 </head>
 <body>
@@ -42,7 +44,7 @@
     <article class="feature"><span class="number">06</span><h3>辅助自我洞察</h3><p>观察具体行为、原话、反例和其他解释，不因为一件事急着定义你是谁，也不进行人格或心理诊断。</p></article>
   </div></div></section>
 
-  <section><div class="wrap"><div class="section-head"><h2>从记录到更新</h2><p>每一步都有独立职责。你可以只走当前需要的一段，也可以让一次学习或项目完整经过整个循环。</p></div><div class="flow" aria-label="知识工作流程"><span>捕捉</span><span>保真</span><span>辨析</span><span>连接</span><span>规划</span><span>实践</span><span>验证</span><span>复盘</span><span>沉淀</span><span>输出</span><span>更新</span></div></div></section>
+  <section><div class="wrap"><div class="section-head"><h2>从记录到更新</h2><p>每一步都有独立职责。你可以只走当前需要的一段，也可以让一次学习或项目完整经过整个循环。</p></div><div class="flow" role="list" aria-label="知识工作流程"><span role="listitem">捕捉</span><span role="listitem">保真</span><span role="listitem">辨析</span><span role="listitem">连接</span><span role="listitem">规划</span><span role="listitem">实践</span><span role="listitem">验证</span><span role="listitem">复盘</span><span role="listitem">沉淀</span><span role="listitem">输出</span><span role="listitem">更新</span></div></div></section>
 
   <section id="skills"><div class="wrap"><div class="section-head"><h2>11 个可以独立调用的 Skills</h2><p>不知道选哪个时，调用 <code>$knowledge-vault</code>。它会识别你所处的阶段，再找到最短的工作路径。</p></div><div class="skill-list">
     <article class="skill"><span class="number">00</span><h3>$knowledge-vault</h3><p>总控入口：在建库、输入、整理、成长、项目、输出和复盘之间路由。</p></article>
@@ -64,9 +66,11 @@
 
   <section id="start"><div class="wrap"><div class="section-head"><h2>从一个真实问题开始</h2><p>安装后打开新的 Codex 任务，调用 <code>$knowledge-vault</code>，说出你此刻最想理清的一件事。</p></div><pre><code>python -X utf8 scripts/install_codex_skills.py &lt;codex-skills-directory&gt; --profile full --dry-run
 python -X utf8 scripts/install_codex_skills.py &lt;codex-skills-directory&gt; --profile full
-python -X utf8 scripts/install_codex_skills.py &lt;codex-skills-directory&gt; --profile full --verify</code></pre><p>首次建库时，Skill 会先访谈并展示预计创建的目录和文件。获得写入授权后才会创建内容。</p><div class="actions"><a class="button primary" href="https://github.com/bao-776/personal-knowledge-system-skills#-快速开始">阅读完整安装说明</a><a class="button" href="https://github.com/bao-776/personal-knowledge-system-skills/issues">告诉我你的使用感受</a></div></div></section>
+  python -X utf8 scripts/install_codex_skills.py &lt;codex-skills-directory&gt; --profile full --verify</code></pre><p>首次建库时，Skill 会先访谈并展示预计创建的目录和文件。获得写入授权后才会创建内容。</p><div class="actions"><a class="button primary" href="https://github.com/bao-776/personal-knowledge-system-skills#-快速开始">阅读完整安装说明</a><a class="button" href="https://github.com/bao-776/personal-knowledge-system-skills/issues">告诉我你的使用感受</a></div></div></section>
 
-  <section><div class="wrap boundary"><h2>清楚比“自动”更重要</h2><ul><li>AI 推测不会直接成为事实</li><li>一次成功不会成为稳定能力</li><li>输出稿不会反向成为事实来源</li><li>候选想法不会自动升级成正式目标</li><li>未授权写入时只提供提案和预览</li><li>不依赖第三方 Obsidian 插件</li><li>不根据一次事件固定定义一个人</li><li>公开示例全部使用虚构材料</li></ul><p>当前版本为 <strong>0.1.2</strong>，采用 MIT License。自动检查覆盖结构、链接、隐私、安装与最小知识库，但不把这些检查描述成完整的真实 Codex 行为评测。</p></div></section>
+  <section><div class="wrap"><div class="section-head"><h2>这些方法从哪里来</h2><p>每个 Skill 都有对应的方法来源和适用边界。它们解释了设计选择，不代表整套系统已经经过整体效果实验。</p></div><div class="use-grid"><article><h3>知识与来源</h3><p><a href="https://www.w3.org/TR/prov-overview/">W3C PROV</a> 支持来源追踪；Sönke Ahrens 的 <a href="https://www.soenkeahrens.de/en/takesmartnotes">How to Take Smart Notes</a> 支持原子笔记与有意义的连接。</p></article><article><h3>个性化与成长</h3><p><a href="https://www.iso.org/standard/77520.html">ISO 9241-210 人本设计</a>强调先理解使用者；刻意练习研究与 <a href="https://www.retrievalpractice.org/make-it-stick">Make It Stick</a> 支持用实践和提取证据观察成长。</p></article><article><h3>经验与复盘</h3><p>David Kolb 的体验式学习循环与 Donald Schön 的 <a href="https://www.hachettebookgroup.com/titles/donald-a-schon/the-reflective-practitioner/9780465068784/">The Reflective Practitioner</a> 支持从行动回到反思，再形成下一次实践。</p></article><article><h3>完整依据与限制</h3><p>11 个 Skill 的逐项来源、转译方式和边界收录在 <a href="https://github.com/bao-776/personal-knowledge-system-skills/blob/main/docs/00-overview/theoretical-foundations.md">理论与方法依据</a>中。</p></article></div></div></section>
+
+  <section><div class="wrap boundary"><h2>清楚比“自动”更重要</h2><ul><li>AI 推测不会直接成为事实</li><li>一次成功不会成为稳定能力</li><li>输出稿不会反向成为事实来源</li><li>候选想法不会自动升级成正式目标</li><li>未授权写入时只提供提案和预览</li><li>不依赖第三方 Obsidian 插件</li><li>不根据一次事件固定定义一个人</li><li>公开示例全部使用虚构材料</li></ul><p>当前版本为 <strong>0.1.3</strong>，采用 MIT License。自动检查覆盖结构、链接、隐私、安装与最小知识库，但不把这些检查描述成完整的真实 Codex 行为评测。</p></div></section>
 
   <section id="faq"><div class="wrap"><div class="section-head"><h2>常见问题</h2><p>这些回答也说明了项目当前能力的边界。</p></div>
     <details><summary>这是一个 Obsidian 插件吗？</summary><p>不是。它是一套 Codex Skills，以 Markdown 文件为核心，并提供 Obsidian 的 Properties、Wikilinks、Bases 和 Dashboard 约定。不安装第三方插件也能使用。</p></details>

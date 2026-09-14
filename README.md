@@ -7,7 +7,7 @@
 ![Codex Skills](https://img.shields.io/badge/Codex-Skills-111827?style=flat-square)
 ![Obsidian Compatible](https://img.shields.io/badge/Obsidian-Compatible-7C3AED?style=flat-square)
 ![Skills](https://img.shields.io/badge/Skills-11-0EA5E9?style=flat-square)
-![Version](https://img.shields.io/badge/Version-0.1.2-FF6B35?style=flat-square)
+![Version](https://img.shields.io/badge/Version-0.1.3-FF6B35?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-22C55E?style=flat-square)
 
 我做这套 Skill，是因为我发现“收藏”很容易，真正把资料变成自己的理解却很难。工作中的项目、科研里的问题、学过的课程、突然闪过的念头，还有那些当时很重要、后来却想不起来的感受和判断，常常一起压在脑子里，或者停在一个越来越满的收藏夹中。

@@ -13,6 +13,7 @@ from pathlib import Path
 TEXT_EXTENSIONS = {".md", ".txt", ".yaml", ".yml", ".json", ".toml", ".py", ".base", ".gitignore", ".html", ".css", ".xml"}
 TEXT_NAMES = {"LICENSE", "VERSION", ".gitignore", ".gitkeep", ".nojekyll"}
 REVIEWED_BINARIES = {
+    "site/assets/favicon.png": "7697d55c4a44b3e2433d0704668e7080dff16af187c98e5ab51c88f289f807d8",
     "site/assets/social-preview.png": "ba131beb6433cb431dff634fd72b4ffa0df9617c8ac1d3cc611a00830554fcce",
 }
 EXCLUDED_PARTS = {".git", "__pycache__", ".test-output"}
