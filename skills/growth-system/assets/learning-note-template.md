@@ -1,3 +1,11 @@
+---
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+type: learning-note
+status: draft
+sources: []
+---
+
 # Learning note
 
 ## Explain in your own words
@@ -7,4 +15,3 @@
 ## Sources
 ## Next mastery check
 ## What this evidence does not prove
-

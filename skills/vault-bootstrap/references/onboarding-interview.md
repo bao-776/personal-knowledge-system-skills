@@ -12,4 +12,4 @@ Ask one question at a time:
 8. What tools and conventions already exist?
 9. How much maintenance is realistic?
 
-Skip answered questions. End with a confirmed minimum design.
+Skip answered questions. For a user asking to start immediately, use one low-sensitivity input and a minimal preview; ask only what blocks that example. Persist confirmed conventions in an existing local configuration or README when writes are authorized, so subsequent work does not repeat the interview. End with a confirmed minimum design.

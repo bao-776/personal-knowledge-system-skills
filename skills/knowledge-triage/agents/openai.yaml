@@ -1,0 +1,6 @@
+interface:
+  display_name: "Knowledge Triage"
+  short_description: "Inventory and prioritize a bounded source batch"
+  default_prompt: "使用 $knowledge-triage 完成指定的小任务，遵循已有授权并报告未验证部分。"
+policy:
+  allow_implicit_invocation: true

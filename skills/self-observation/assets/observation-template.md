@@ -1,5 +1,8 @@
 # Observation
 
+- Date:
+- Source locator:
+- Confirmation status: unconfirmed
 - Context:
 - Direct evidence:
 - Tentative inference:
@@ -9,4 +12,3 @@
 - Why it matters:
 - Open question:
 - Review condition:
-

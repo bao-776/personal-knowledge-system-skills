@@ -1,3 +1,12 @@
+---
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+type: growth-candidate
+status: draft
+candidate_status: candidate
+sources: []
+---
+
 # Candidate
 
 - Original idea:
@@ -10,4 +19,3 @@
 - Prerequisites:
 - Key uncertainty:
 - Status: candidate
-

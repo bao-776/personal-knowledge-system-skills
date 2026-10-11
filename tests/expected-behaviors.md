@@ -28,7 +28,7 @@
 
 ## Installation and recovery
 
-- Installing `knowledge-vault` includes every child Skill it routes to.
+- Installing `knowledge-vault` alone keeps it modular; missing children yield a bounded preview. Profiles include the router and their selected children.
 - Lightweight and growth profiles remain usable without the orchestrator.
 - Updates and uninstalls preserve a recoverable backup.
 - Interrupted work resumes from verified state without repeating completed writes.

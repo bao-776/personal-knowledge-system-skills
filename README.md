@@ -2,11 +2,11 @@
 
 > 🧠 面向学生、研究者和知识工作者的开源 Codex 个性化知识库 Skill Suite：用 Markdown 或 Obsidian 接住零散信息，连接原子笔记，记录成长与项目，并在证据基础上复盘和自我观察。
 
-[项目官网](https://bao-776.github.io/personal-knowledge-system-skills/) · [English](README.en.md) · [快速安装](#-快速开始) · [11 个 Skills](#-什么时候调用哪个-skill) · [提交反馈](https://github.com/bao-776/personal-knowledge-system-skills/issues)
+[项目官网](https://bao-776.github.io/personal-knowledge-system-skills/) · [English](README.en.md) · [快速安装](#-快速开始) · [16 个 Skills](#-什么时候调用哪个-skill) · [提交反馈](https://github.com/bao-776/personal-knowledge-system-skills/issues)
 
 ![Codex Skills](https://img.shields.io/badge/Codex-Skills-111827?style=flat-square)
 ![Obsidian Compatible](https://img.shields.io/badge/Obsidian-Compatible-7C3AED?style=flat-square)
-![Skills](https://img.shields.io/badge/Skills-11-0EA5E9?style=flat-square)
+![Skills](https://img.shields.io/badge/Skills-16-0EA5E9?style=flat-square)
 ![Version](https://img.shields.io/badge/Version-0.1.3-FF6B35?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-22C55E?style=flat-square)
 
@@ -64,6 +64,18 @@
 - 如果你需要把知识库中的内容整理成报告、文章、申请材料或团队简报，并控制受众、来源和披露范围——调用 `$knowledge-output`。
 - 如果你的需求跨越多个阶段，或者你还不知道该选哪一个——调用 `$knowledge-vault`，它会帮你找到最短、最合适的路径。
 
+### 五个小任务入口
+
+原有 11 个核心模块保留；新增小 Skill 可独立调用，不是每日打卡或后台爬虫。
+
+| Skill | 单次任务 |
+|---|---|
+| `$knowledge-retrieve` | 找回旧笔记，以来源与缺口回答 |
+| `$knowledge-impact` | 检查结论变化影响哪些笔记和输出 |
+| `$knowledge-triage` | 为一批资料分组、去重候选和排序 |
+| `$knowledge-health` | 只读检查断链、证据缺口和状态冲突 |
+| `$knowledge-capture` | 收录用户指定的一条链接、截图或文字 |
+
 ## 🗺️ 它可以记录什么
 
 它适用于工作、科研、学习和生活中需要长期理解与接续的事情，例如：
@@ -83,9 +95,9 @@
 
 | 模式 | 适合你现在的需要 | 包含范围 |
 |---|---|---|
-| `lightweight` | 先把资料接住、整理成笔记和输出 | Intake、Atomic Notes、Output |
-| `growth` | 同时记录学习、项目和复盘 | lightweight，加 Growth、Project、Retrospective |
-| `full` | 建立完整的个人知识与成长系统 | 全部 11 个 Skill |
+| `lightweight` | 先把资料接住、整理成笔记和输出 | Router、Intake、Atomic Notes、Output、Retrieve、Capture |
+| `growth` | 同时记录学习、项目和复盘 | lightweight，加 Growth、Project、Retrospective、Impact |
+| `full` | 建立完整的个人知识与成长系统 | 全部 16 个 Skill |
 
 模式只是安装组合，可以随时调整。具体说明见 [使用模式](docs/00-overview/usage-modes.md)。
 
@@ -134,7 +146,7 @@
    python -X utf8 scripts/install_codex_skills.py <codex-skills-directory> --profile full --verify
    ```
 
-   只安装 `$knowledge-vault` 时，脚本会自动补齐它路由的全部子 Skill，避免总控入口缺少实际工作流。
+   `$knowledge-vault` 可独立安装，并根据已安装子 Skill 路由；缺少模块时只给出明确限制和预览。轻量与成长模式也包含统一入口。
 
 4. 重新打开一个 Codex 任务，让技能被发现。
 5. 调用 `$knowledge-vault`，说出你此刻想建立、整理、记录或梳理清楚的事情。
@@ -151,7 +163,8 @@ python -X utf8 scripts/install_codex_skills.py <codex-skills-directory> atomic-n
 
 ## 🛡️ 我们坚持的边界
 
-- 不把 AI 推测写成事实。
+- 保留原始输入；先筛选核心事实前提，再有限联网核查，观点与核实状态分开。
+- 不把有出处直接视为真实，不把 AI 推测写成事实。
 - 不因一次成功判定稳定能力。
 - 不把输出稿反向当作事实来源。
 - 不要求第三方 Obsidian 插件。

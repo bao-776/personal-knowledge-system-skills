@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS = ROOT / "skills"
-EXPECTED = {"knowledge-vault", "vault-bootstrap", "knowledge-intake", "atomic-notes", "obsidian-vault", "growth-system", "inspire-time", "project-lifecycle", "retrospective", "self-observation", "knowledge-output"}
+EXPECTED = {"knowledge-vault", "vault-bootstrap", "knowledge-intake", "atomic-notes", "obsidian-vault", "growth-system", "inspire-time", "project-lifecycle", "retrospective", "self-observation", "knowledge-output", "knowledge-retrieve", "knowledge-impact", "knowledge-triage", "knowledge-health", "knowledge-capture"}
 
 def main() -> int:
     errors: list[str] = []

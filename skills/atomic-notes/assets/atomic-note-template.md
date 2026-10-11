@@ -1,7 +1,9 @@
 ---
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
+type: atomic-note
 status: draft
+verification_status: unchecked
 tags: []
 sources: []
 ---
@@ -21,4 +23,3 @@ sources: []
 ## Related
 
 ## Change log
-

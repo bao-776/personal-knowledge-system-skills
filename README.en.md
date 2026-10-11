@@ -1,12 +1,12 @@
 # Personal Knowledge System Skills
 
-> An open-source suite of 11 Codex skills for students, researchers, and knowledge workers who want to build a personalized, evidence-based knowledge system in Markdown or Obsidian.
+> An open-source suite of 16 Codex skills for students, researchers, and knowledge workers who want to build a personalized, evidence-based knowledge system in Markdown or Obsidian.
 
 [Website](https://bao-776.github.io/personal-knowledge-system-skills/en/) · [中文说明](README.md) · [Installation](#quick-start) · [GitHub Issues](https://github.com/bao-776/personal-knowledge-system-skills/issues)
 
 ![Codex Skills](https://img.shields.io/badge/Codex-Skills-111827?style=flat-square)
 ![Obsidian Compatible](https://img.shields.io/badge/Obsidian-Compatible-7C3AED?style=flat-square)
-![Skills](https://img.shields.io/badge/Skills-11-0EA5E9?style=flat-square)
+![Skills](https://img.shields.io/badge/Skills-16-0EA5E9?style=flat-square)
 ![Version](https://img.shields.io/badge/Version-0.1.3-FF6B35?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-22C55E?style=flat-square)
 
@@ -29,7 +29,7 @@ The core workflow is:
 Capture → Preserve → Examine → Connect → Plan → Practice → Validate → Review → Distill → Publish → Update
 ```
 
-## The 11 skills
+## The 16 skills
 
 | Skill | Use it when you want to… |
 |---|---|
@@ -44,6 +44,8 @@ Capture → Preserve → Examine → Connect → Plan → Practice → Validate 
 | `$retrospective` | review a project or period from recorded events and define the next experiment |
 | `$self-observation` | examine recurring preferences or work patterns without diagnosis or fixed labels |
 | `$knowledge-output` | create an audience-specific report, article, application, or briefing with disclosure control |
+
+Five small task skills extend the original eleven core modules: `$knowledge-retrieve`, `$knowledge-impact`, `$knowledge-triage`, `$knowledge-health`, and `$knowledge-capture`. They answer from notes, trace changes, prioritize a batch, audit read-only, and capture a single selected item. They do not run daily or crawl accounts.
 
 ## Quick start
 
@@ -67,12 +69,13 @@ Three profiles are available:
 
 | Profile | Included workflow |
 |---|---|
-| `lightweight` | intake, atomic notes, and output |
-| `growth` | lightweight plus learning, projects, and retrospectives |
-| `full` | all 11 skills |
+| `lightweight` | router, intake, atomic notes, output, retrieval, and capture |
+| `growth` | lightweight plus learning, projects, retrospectives, and impact checks |
+| `full` | all 16 skills |
 
 ## Evidence and safety boundaries
 
+- Preserve originals and selectively verify key empirical premises before maintaining conclusions. Source attribution is separate from verification status.
 - AI inferences are not recorded as confirmed facts.
 - One success is not treated as stable capability.
 - Published output does not become a source of truth by itself.

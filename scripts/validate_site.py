@@ -58,6 +58,12 @@ def validate_page(path: Path, expected_canonical: str) -> list[str]:
     if not {"zh-CN", "en", "x-default"}.issubset({lang for lang, _ in alternates}): errors.append(f"{path}: missing hreflang links")
     for required in ("og:title", "og:description", "og:image"):
         if not any(m.get("property") == required and m.get("content") for m in parser.meta): errors.append(f"{path}: missing {required}")
+    for attrs, _ in parser.scripts:
+        src = attrs.get("src")
+        if src and not src.startswith(("https://", "http://")):
+            target = (path.parent / urlparse(src).path).resolve()
+            if not target.is_relative_to(SITE.resolve()) or not target.is_file():
+                errors.append(f"{path}: missing or out-of-site script {src}")
     json_ld = [text for attrs, text in parser.scripts if attrs.get("type") == "application/ld+json"]
     if not json_ld: errors.append(f"{path}: missing JSON-LD")
     for value in json_ld:

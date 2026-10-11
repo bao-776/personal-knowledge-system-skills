@@ -1,7 +1,7 @@
 ---
 created: YYYY-MM-DD
 type: intake
-source: ""
+sources: []
 sensitivity: private
 status: unprocessed
 ---
@@ -12,12 +12,17 @@ status: unprocessed
 
 ## Extracted candidates
 
-- fact:
+- source-claim:
 - user-statement:
 - user-judgment:
 - ai-inference:
 - action:
 - needs-verification:
 
-## Destination decision
+## Selective verification
 
+- Selected claims and why:
+- Result, scope, primary source, and checked date:
+- Deferred or skipped claims and why:
+
+## Destination decision

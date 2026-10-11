@@ -1,3 +1,3 @@
 # Conflict handling
 
-Preserve each claim, its source, time, and context. State whether the conflict may arise from scope, definition, version, or factual disagreement. Offer a provisional interpretation only when useful and label it. Ask the owner to decide when the result changes maintained truth, identity, or action.
+Preserve each claim, original locator, time, context, and verification state. Check scope, definition, version, and factual disagreement before proposing a correction. Seek primary evidence for consequential factual conflicts within the selective-verification budget. The owner's preference cannot establish an empirical fact: unresolved conflicts remain parallel claims. Ask the owner for value choices, commitments, disclosure, or which provisional assumption to use. Preserve Raw; annotate corrections and update Wiki with supersession history.

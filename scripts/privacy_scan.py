@@ -10,11 +10,14 @@ import subprocess
 import sys
 from pathlib import Path
 
-TEXT_EXTENSIONS = {".md", ".txt", ".yaml", ".yml", ".json", ".toml", ".py", ".base", ".gitignore", ".html", ".css", ".xml"}
+TEXT_EXTENSIONS = {".md", ".txt", ".yaml", ".yml", ".json", ".toml", ".py", ".base", ".gitignore", ".html", ".css", ".js", ".svg", ".xml"}
 TEXT_NAMES = {"LICENSE", "VERSION", ".gitignore", ".gitkeep", ".nojekyll"}
 REVIEWED_BINARIES = {
     "site/assets/favicon.png": "7697d55c4a44b3e2433d0704668e7080dff16af187c98e5ab51c88f289f807d8",
-    "site/assets/social-preview.png": "ba131beb6433cb431dff634fd72b4ffa0df9617c8ac1d3cc611a00830554fcce",
+    "site/assets/social-preview.png": "df0826b5a9d99e030846f4bf41c4435099bb497f1fc983988a4a2abd37bae30d",
+}
+REVIEWED_HISTORICAL_BINARIES = {
+    "site/assets/social-preview.png": {"ba131beb6433cb431dff634fd72b4ffa0df9617c8ac1d3cc611a00830554fcce"},
 }
 EXCLUDED_PARTS = {".git", "__pycache__", ".test-output"}
 PATTERNS = {
@@ -46,9 +49,11 @@ def scan_text(content: str, location: str, forbidden: list[str]) -> list[str]:
                 findings.append(f"{location}:{lineno}: forbidden token")
     return findings
 
-def reviewed_binary(name: str, content: bytes) -> bool:
-    expected = REVIEWED_BINARIES.get(Path(name).as_posix())
-    return bool(expected and hashlib.sha256(content).hexdigest() == expected)
+def reviewed_binary(name: str, content: bytes, *, historical: bool = False) -> bool:
+    name = Path(name).as_posix()
+    actual = hashlib.sha256(content).hexdigest()
+    expected = REVIEWED_BINARIES.get(name)
+    return bool(expected and actual == expected) or (historical and actual in REVIEWED_HISTORICAL_BINARIES.get(name, set()))
 
 def git_output(root: Path, *args: str) -> str:
     result = subprocess.run(["git", *args], cwd=root, text=True, encoding="utf-8", errors="replace", capture_output=True)
@@ -67,7 +72,7 @@ def scan_history(root: Path, forbidden: list[str]) -> tuple[list[str], int]:
             path = Path(name)
             if path.suffix.lower() not in TEXT_EXTENSIONS and path.name not in TEXT_NAMES:
                 result = subprocess.run(["git", "show", f"{commit}:{name}"], cwd=root, capture_output=True)
-                if result.returncode == 0 and reviewed_binary(name, result.stdout):
+                if result.returncode == 0 and reviewed_binary(name, result.stdout, historical=True):
                     continue
                 findings.add(f"git-history:{commit[:12]}:{name}: binary or unreviewed file")
                 continue

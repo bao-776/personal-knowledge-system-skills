@@ -88,3 +88,49 @@ footer { padding: 3rem 0; color: var(--muted); font-size: .92rem; }
   .lead { color: #c5d0ca; }
   .button.primary { background: var(--ink); color: #101512; }
 }
+
+/* Evidence walkthrough uses real interactive documents, not a simulated app screenshot. */
+.hero { padding-top: clamp(2.5rem, 6vw, 5.5rem); padding-bottom: 4rem; }
+h1 { max-width: 16ch; font-size: clamp(2.6rem, 5.6vw, 4.7rem); line-height: 1.12; }
+.button { cursor: pointer; font: inherit; font-weight: 700; white-space: nowrap; }
+.section-intro { color: var(--muted); max-width: 70ch; margin: 1.2rem 0 2.3rem; }
+.relationship { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 2rem; margin: 2rem 0 0; }
+.relationship > div { border-top: 2px solid var(--accent); padding-top: 1.3rem; }
+.relationship dt { font-size: 1.25rem; font-weight: 700; }
+.relationship dd { margin: .75rem 0 0; color: var(--muted); }
+.example-layout { display: grid; grid-template-columns: minmax(220px,.36fr) minmax(0,1fr); gap: 2rem; }
+.step-list { display: grid; gap: .4rem; align-content: start; }
+.step { display: flex; gap: 1rem; align-items: center; text-align: left; padding: .9rem 1rem; border: 1px solid transparent; border-radius: var(--radius); color: var(--muted); background: transparent; cursor: pointer; font: inherit; }
+.step span { font: 700 .8rem ui-monospace,monospace; }
+.step[aria-pressed="true"] { color: var(--accent-dark); background: var(--soft); border-color: var(--line); font-weight: 700; }
+.step:hover { border-color: var(--accent); }
+.demo-document { padding: clamp(1.3rem, 4vw, 2.7rem); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); min-height: 390px; }
+.demo-stage[hidden] { display: none; }
+.document-path { font: .83rem ui-monospace,monospace; color: var(--muted); overflow-wrap: anywhere; margin: 0 0 2rem; }
+.demo-stage h3 { font-size: 1.6rem; }
+.demo-content { white-space: pre-line; line-height: 1.9; margin-top: 1.6rem; overflow-wrap: anywhere; }
+.stage-note { border-top: 1px solid var(--line); padding-top: 1.2rem; color: var(--muted); margin-top: 2rem; }
+.example-caption { color: var(--muted); font-size: .93rem; }
+.small-skills { border-top: 1px solid var(--line); }
+.small-skill { display: grid; grid-template-columns: minmax(220px,.55fr) 1fr; padding: 1.6rem 0; gap: 2rem; border-bottom: 1px solid var(--line); }
+.small-skill code { color: var(--accent-dark); font-size: .84rem; overflow-wrap: anywhere; }
+.small-skill p { color: var(--muted); margin: 0; }
+.core-details { margin-top: 2.3rem; }
+.install-control { display: grid; gap: .65rem; max-width: 630px; }
+.install-control label { font-weight: 700; }
+select { padding: .8rem; font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); width: 100%; }
+.copy-command { background: var(--surface); }
+#copy-status { display: inline-block; margin: .7rem 1rem; color: var(--muted); font-size: .9rem; }
+.first-task { margin-top: 2.5rem; }
+blockquote { margin: 1rem 0; padding: .6rem 1.3rem; border-left: 3px solid var(--accent); color: var(--ink); max-width: 68ch; }
+@media (max-width: 760px) {
+ .relationship,.example-layout,.small-skill { grid-template-columns: 1fr; }
+ .relationship { gap: 1.4rem; }
+ .step-list { grid-template-columns: repeat(2,minmax(0,1fr)); gap: .35rem; }
+ .step { font-size: .88rem; padding: .7rem; gap: .5rem; }
+ .small-skill { gap: .7rem; }
+ .demo-document { min-height: 330px; }
+ .index-card { margin-top: 1rem; }
+ .hero { gap: 1.6rem; }
+ .brand { font-size: .94rem; }
+}

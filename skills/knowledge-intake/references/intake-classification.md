@@ -7,4 +7,4 @@
 - Important classification affecting identity, commitments, or truth status → ask.
 - Duplicate or disposable material → update, reference, or do not write.
 
-Explain the chosen action.
+Keep one source record. A mixed input may support several maintained notes, but cross-link its canonical source instead of duplicating the full original into every category. Explain the chosen action.

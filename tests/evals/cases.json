@@ -3,105 +3,358 @@
     "id": "zh-route-bootstrap",
     "language": "zh-CN",
     "prompt": "我第一次建知识库，想先聊清楚需求再创建最小目录。",
-    "expected_skills": ["vault-bootstrap"],
-    "forbidden_skills": ["self-observation"],
-    "assertions": ["先采访目的和隐私边界", "写入前展示预览"]
+    "expected_skills": [
+      "vault-bootstrap"
+    ],
+    "forbidden_skills": [
+      "self-observation"
+    ],
+    "assertions": [
+      "先采访目的和隐私边界",
+      "写入前展示预览"
+    ]
   },
   {
     "id": "zh-route-intake",
     "language": "zh-CN",
     "prompt": "把这份会议记录整理进知识库，里面有事实、我的判断和几个没确认的推测。",
-    "expected_skills": ["knowledge-intake"],
-    "forbidden_skills": ["inspire-time"],
-    "assertions": ["保留来源", "区分事实、判断和推测"]
+    "expected_skills": [
+      "knowledge-intake"
+    ],
+    "forbidden_skills": [
+      "inspire-time"
+    ],
+    "assertions": [
+      "保留来源",
+      "区分事实、判断和推测"
+    ]
   },
   {
     "id": "zh-route-atomic-update",
     "language": "zh-CN",
     "prompt": "这条资料和已有笔记在回答同一个问题，请优先更新，不要再建一张重复卡片。",
-    "expected_skills": ["atomic-notes"],
+    "expected_skills": [
+      "atomic-notes"
+    ],
     "forbidden_skills": [],
-    "assertions": ["搜索已有笔记", "优先更新或合并"]
+    "assertions": [
+      "搜索已有笔记",
+      "优先更新或合并"
+    ]
   },
   {
     "id": "zh-route-obsidian",
     "language": "zh-CN",
     "prompt": "帮我检查 Obsidian Properties、双链和 Bases，没安装第三方插件也要能用。",
-    "expected_skills": ["obsidian-vault"],
+    "expected_skills": [
+      "obsidian-vault"
+    ],
     "forbidden_skills": [],
-    "assertions": ["保持 Markdown 可迁移", "不假定第三方插件"]
+    "assertions": [
+      "保持 Markdown 可迁移",
+      "不假定第三方插件"
+    ]
   },
   {
     "id": "zh-route-growth",
     "language": "zh-CN",
     "prompt": "我突然想学数据可视化，但还没决定要不要投入，先帮我评估。",
-    "expected_skills": ["growth-system"],
-    "forbidden_skills": ["project-lifecycle"],
-    "assertions": ["保持候选状态", "不自动调整优先级"]
+    "expected_skills": [
+      "growth-system"
+    ],
+    "forbidden_skills": [
+      "project-lifecycle"
+    ],
+    "assertions": [
+      "保持候选状态",
+      "不自动调整优先级"
+    ]
   },
   {
     "id": "zh-boundary-inspire",
     "language": "zh-CN",
     "prompt": "我发现先写验收标准能减少返工，这个方法在学习和项目里都能用，帮我设计一次实践。",
-    "expected_skills": ["inspire-time"],
-    "forbidden_skills": ["self-observation"],
-    "assertions": ["形成可迁移洞见", "连接一个可观察实践"]
+    "expected_skills": [
+      "inspire-time"
+    ],
+    "forbidden_skills": [
+      "self-observation"
+    ],
+    "assertions": [
+      "形成可迁移洞见",
+      "连接一个可观察实践"
+    ]
   },
   {
     "id": "zh-boundary-ordinary-quote",
     "language": "zh-CN",
     "prompt": "我摘录了一句很喜欢的话，但还不知道它会改变什么。",
-    "expected_skills": ["knowledge-intake"],
-    "forbidden_skills": ["inspire-time"],
-    "assertions": ["不自动形成 Inspire Time"]
+    "expected_skills": [
+      "knowledge-intake"
+    ],
+    "forbidden_skills": [
+      "inspire-time"
+    ],
+    "assertions": [
+      "不自动形成 Inspire Time"
+    ]
   },
   {
     "id": "zh-route-project",
     "language": "zh-CN",
     "prompt": "这个项目停了三天，帮我从目标、当前位置、卡点和验证状态恢复。",
-    "expected_skills": ["project-lifecycle"],
-    "forbidden_skills": ["retrospective"],
-    "assertions": ["重建断点", "不重复已完成工作"]
+    "expected_skills": [
+      "project-lifecycle"
+    ],
+    "forbidden_skills": [
+      "retrospective"
+    ],
+    "assertions": [
+      "重建断点",
+      "不重复已完成工作"
+    ]
   },
   {
     "id": "zh-route-retrospective",
     "language": "zh-CN",
     "prompt": "这个月结束了，请根据事件记录陪我逐题复盘，不要替我回答。",
-    "expected_skills": ["retrospective"],
-    "forbidden_skills": ["self-observation"],
-    "assertions": ["一次问一个问题", "不虚构用户反思"]
+    "expected_skills": [
+      "retrospective"
+    ],
+    "forbidden_skills": [
+      "self-observation"
+    ],
+    "assertions": [
+      "一次问一个问题",
+      "不虚构用户反思"
+    ]
   },
   {
     "id": "zh-route-self-observation",
     "language": "zh-CN",
     "prompt": "我好像连续几个项目都会在公开前反复修改，帮我看看可能是什么模式，但先别给我定性。",
-    "expected_skills": ["self-observation"],
-    "forbidden_skills": ["inspire-time"],
-    "assertions": ["保留证据和反例", "不形成永久人格标签"]
+    "expected_skills": [
+      "self-observation"
+    ],
+    "forbidden_skills": [
+      "inspire-time"
+    ],
+    "assertions": [
+      "保留证据和反例",
+      "不形成永久人格标签"
+    ]
   },
   {
     "id": "zh-route-output",
     "language": "zh-CN",
     "prompt": "把知识库内容整理成公开文章，先确认受众和哪些私人信息不能出现。",
-    "expected_skills": ["knowledge-output"],
+    "expected_skills": [
+      "knowledge-output"
+    ],
     "forbidden_skills": [],
-    "assertions": ["确认披露范围", "核对来源版本"]
+    "assertions": [
+      "确认披露范围",
+      "核对来源版本"
+    ]
   },
   {
     "id": "zh-route-orchestrator",
     "language": "zh-CN",
     "prompt": "我有一批新资料，想整理成笔记，再用于当前项目，最后形成公开输出。我不知道应该先用哪个 Skill。",
-    "expected_skills": ["knowledge-vault"],
+    "expected_skills": [
+      "knowledge-vault"
+    ],
     "forbidden_skills": [],
-    "assertions": ["选择最短流程", "不自动运行可选后续步骤"]
+    "assertions": [
+      "选择最短流程",
+      "不自动运行可选后续步骤"
+    ]
   },
   {
     "id": "en-route-output",
     "language": "en",
     "prompt": "Turn maintained notes into a public brief, checking audience, disclosure and source versions first.",
-    "expected_skills": ["knowledge-output"],
+    "expected_skills": [
+      "knowledge-output"
+    ],
     "forbidden_skills": [],
-    "assertions": ["confirm audience", "minimize disclosure"]
+    "assertions": [
+      "confirm audience",
+      "minimize disclosure"
+    ]
+  },
+  {
+    "id": "zh-selective-verification",
+    "language": "zh-CN",
+    "prompt": "保存原图不改动，只审查文章支持主要结论的关键事实。其中声称热水澡让睡意增加45%，还有作者个人感受。",
+    "expected_skills": [
+      "knowledge-intake"
+    ],
+    "forbidden_skills": [],
+    "assertions": [
+      "先区分观点与事实前提",
+      "方向与45%分开核查原始研究",
+      "不逐句全篇联网",
+      "查不到数字不判假也不保留为确定结论",
+      "原图保持不变"
+    ]
+  },
+  {
+    "id": "zh-raw-correction",
+    "language": "zh-CN",
+    "prompt": "已有Raw原文的日期可能错误，新证据给出另一日期。请更新知识结论但保留最原始输入。",
+    "expected_skills": [
+      "knowledge-intake"
+    ],
+    "forbidden_skills": [],
+    "assertions": [
+      "保留Raw原文",
+      "更正保留新证据和旧主张",
+      "客观冲突不能只靠用户偏好裁定"
+    ]
+  },
+  {
+    "id": "zh-existing-authorization",
+    "language": "zh-CN",
+    "prompt": "已授权把这份材料存入指定Wiki目录，请按原目录规则整理，不要重复问同一写入许可。",
+    "expected_skills": [
+      "knowledge-intake"
+    ],
+    "forbidden_skills": [],
+    "assertions": [
+      "复用同范围授权",
+      "回读写入结果"
+    ]
+  },
+  {
+    "id": "zh-fast-retrospective",
+    "language": "zh-CN",
+    "prompt": "只做项目事实回顾，我现在不想回答访谈问题。",
+    "expected_skills": [
+      "retrospective"
+    ],
+    "forbidden_skills": [],
+    "assertions": [
+      "交付事实回顾",
+      "反思留待补不编造"
+    ]
+  },
+  {
+    "id": "en-selective-verification",
+    "language": "en",
+    "prompt": "Preserve the source image. Check only the key empirical premises; distinguish the effect direction from an unsupported 45 percent claim.",
+    "expected_skills": [
+      "knowledge-intake"
+    ],
+    "forbidden_skills": [],
+    "assertions": [
+      "select claims before search",
+      "preserve original",
+      "report unresolved magnitude"
+    ]
+  },
+  {
+    "id": "new-knowledge-retrieve-0",
+    "language": "zh-CN",
+    "prompt": "帮我找回库里的旧结论，只基于已有来源回答，不要新建笔记。",
+    "expected_skills": [
+      "knowledge-retrieve"
+    ],
+    "forbidden_skills": [
+      "knowledge-intake"
+    ],
+    "assertions": [
+      "引用实际读过的来源路径",
+      "未命中不等于不存在",
+      "不默认联网或写入"
+    ]
+  },
+  {
+    "id": "new-knowledge-impact-1",
+    "language": "zh-CN",
+    "prompt": "数字需要更正，先看影响哪些笔记和公开输出，不要改文件。",
+    "expected_skills": [
+      "knowledge-impact"
+    ],
+    "forbidden_skills": [],
+    "assertions": [
+      "查实际依赖",
+      "保留历史快照",
+      "只给更新提案"
+    ]
+  },
+  {
+    "id": "new-knowledge-triage-2",
+    "language": "zh-CN",
+    "prompt": "八份资料先分诊，选最值得先整理的，不用全文核查。",
+    "expected_skills": [
+      "knowledge-triage"
+    ],
+    "forbidden_skills": [
+      "knowledge-intake"
+    ],
+    "assertions": [
+      "覆盖所给批次",
+      "区分重复候选",
+      "不自动全文摄入"
+    ]
+  },
+  {
+    "id": "new-knowledge-health-3",
+    "language": "zh-CN",
+    "prompt": "只读检查断链、到期待查和无来源结论，先给修复建议。",
+    "expected_skills": [
+      "knowledge-health"
+    ],
+    "forbidden_skills": [],
+    "assertions": [
+      "核实疑似断链",
+      "待复查不等于错误",
+      "不归档删除"
+    ]
+  },
+  {
+    "id": "new-knowledge-capture-4",
+    "language": "zh-CN",
+    "prompt": "只收录我指定的截图，不要浏览我的收藏或推荐列表。",
+    "expected_skills": [
+      "knowledge-capture"
+    ],
+    "forbidden_skills": [],
+    "assertions": [
+      "保留原图",
+      "标明OCR限制",
+      "单条范围"
+    ]
+  },
+  {
+    "id": "new-knowledge-capture-5",
+    "language": "zh-CN",
+    "prompt": "指定页面提示验证码，别绕过或自动重试。",
+    "expected_skills": [
+      "knowledge-capture"
+    ],
+    "forbidden_skills": [],
+    "assertions": [
+      "停止",
+      "提供截图文字替代",
+      "不提取Cookie"
+    ]
+  },
+  {
+    "id": "new-knowledge-retrieve-6",
+    "language": "en",
+    "prompt": "Search my existing notes and cite actual files. No external lookup or edits.",
+    "expected_skills": [
+      "knowledge-retrieve"
+    ],
+    "forbidden_skills": [
+      "knowledge-intake"
+    ],
+    "assertions": [
+      "cite inspected notes",
+      "report limits",
+      "no writes"
+    ]
   }
 ]
-

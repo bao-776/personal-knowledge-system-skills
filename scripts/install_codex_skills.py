@@ -5,12 +5,14 @@ from __future__ import annotations
 import argparse
 import hashlib
 import shutil
+from contextlib import contextmanager
+from uuid import uuid4
 from datetime import datetime
 from pathlib import Path
 
 PROFILES = {
-    "lightweight": ["knowledge-intake", "atomic-notes", "knowledge-output"],
-    "growth": ["knowledge-intake", "atomic-notes", "knowledge-output", "growth-system", "project-lifecycle", "retrospective"],
+    "lightweight": ["knowledge-vault", "knowledge-intake", "atomic-notes", "knowledge-output", "knowledge-retrieve", "knowledge-capture"],
+    "growth": ["knowledge-vault", "knowledge-intake", "atomic-notes", "knowledge-output", "growth-system", "project-lifecycle", "retrospective", "knowledge-impact", "knowledge-retrieve", "knowledge-capture"],
     "full": [],
 }
 
@@ -32,14 +34,25 @@ def select_skills(args: argparse.Namespace, available: dict[str, Path]) -> list[
     unknown = sorted(set(selected) - set(available))
     if unknown:
         raise SystemExit(f"Unknown skills: {', '.join(unknown)}")
-    if "knowledge-vault" in selected and set(selected) != set(available):
-        selected = sorted(available)
-        print("knowledge-vault selected: including all routed child skills")
     return list(dict.fromkeys(selected))
 
 def backup_path(target_root: Path, operation: str) -> Path:
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S-%f")
-    return target_root / ".personal-knowledge-system-backups" / f"{stamp}-{operation}"
+    return target_root.parent / ("." + target_root.name + "-personal-knowledge-system-backups") / f"{stamp}-{operation}"
+
+@contextmanager
+def staging_directory(parent: Path):
+    parent = parent.resolve()
+    stage = parent / (".pks-stage-" + uuid4().hex)
+    stage.mkdir()
+    try:
+        yield stage
+    finally:
+        if stage.resolve().parent != parent:
+            raise RuntimeError("Unexpected staging cleanup path")
+        if stage.exists():
+            shutil.rmtree(stage)
+
 
 def main() -> int:
     parser = argparse.ArgumentParser()
@@ -111,14 +124,32 @@ def main() -> int:
         print(f"INSTALL_DRY_RUN_OK skills={len(selected)}")
         return 0
 
-    target_root.mkdir(parents=True, exist_ok=True)
+    # Stage and verify all copies outside the discovery directory before mutation.
+    target_root.parent.mkdir(parents=True, exist_ok=True)
     backup = backup_path(target_root, "update") if existing else None
-    if backup:
-        backup.mkdir(parents=True, exist_ok=True)
-        for name in existing:
-            shutil.move(str(target_root / name), str(backup / name))
-    for name in selected:
-        shutil.copytree(available[name], target_root / name)
+    moved: list[str] = []
+    installed: list[str] = []
+    with staging_directory(target_root.parent) as stage:
+        for name in selected:
+            shutil.copytree(available[name], stage / name)
+            if tree_hashes(available[name]) != tree_hashes(stage / name):
+                raise RuntimeError(f"Staged verification failed: {name}")
+        target_root.mkdir(parents=True, exist_ok=True)
+        try:
+            if backup:
+                backup.mkdir(parents=True, exist_ok=True)
+                for name in existing:
+                    shutil.move(str(target_root / name), str(backup / name))
+                    moved.append(name)
+            for name in selected:
+                shutil.move(str(stage / name), str(target_root / name))
+                installed.append(name)
+        except Exception:
+            for name in reversed(installed):
+                shutil.move(str(target_root / name), str(stage / name))
+            for name in reversed(moved):
+                shutil.move(str(backup / name), str(target_root / name))
+            raise
     verb = "UPDATE_OK" if existing else "INSTALL_OK"
     suffix = f" backup={backup}" if backup else ""
     print(f"{verb} skills={len(selected)}{suffix}")
